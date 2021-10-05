@@ -6,10 +6,22 @@ function Projects(props) {
     <div>
       <h1>Projects</h1>
       <Thumbnail
-        link=""
+        link="/righttime"
         image=""
-        title=""
-        category=""
+        title="RightTime"
+        category="Website"
+      />
+      <Thumbnail
+        link="/pikachoose"
+        image=""
+        title="Pikachoose"
+        category="Website"
+      />
+      <Thumbnail
+        link="/bournemouthbars"
+        image=""
+        title="Bournemouth Bars"
+        category="Website"
       />
     </div>
   )
