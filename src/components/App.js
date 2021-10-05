@@ -17,9 +17,12 @@ function App() {
         <div className="Navigation">
           {/* <img src={} className="logo" alt="Logo Image" /> */}
           <div className="navigation-sub">
-            <a href="" className="item">Projects</a>
-            <a href="" className="item">Articles</a>
-            <a href="" className="item">About</a>
+
+            {/* links setup */}
+            <Link to="/" className="item">Projects</Link>
+            <Link to="/articles" className="item">Articles</Link>
+            <Link to="/about" className="item">About</Link>
+
           </div>
         </div>
       </div>
