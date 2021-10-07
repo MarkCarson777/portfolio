@@ -1,5 +1,6 @@
 import React from "react";
-import Thumbnail from './Thumbnail.js';
+import Thumbnail from "./Thumbnail.js";
+import clock from "../assets/clock.jpg";
 
 function Projects(props) {
   return (
@@ -7,7 +8,7 @@ function Projects(props) {
       <h1>Projects</h1>
       <Thumbnail
         link="/righttime"
-        image=""
+        image={clock}
         title="RightTime"
         category="Website"
       />
