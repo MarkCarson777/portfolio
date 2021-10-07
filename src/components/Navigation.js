@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../css/Navigation.css";
 
 function Navigation(props) {
   return (
-    <div className="Navigation">
+    <div className="navigation">
       {/* <img src={} className="logo" alt="Logo Image" /> */}
       <div className="navigation-sub">
 

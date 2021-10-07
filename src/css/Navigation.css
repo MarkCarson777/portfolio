@@ -1,0 +1,11 @@
+.navigation {
+  background-color: lightblue;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  color: black;
+  padding-right: 8px;
+  text-decoration: none;
+}
