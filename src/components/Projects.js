@@ -16,7 +16,7 @@ function Projects(props) {
           // category="Website"
         />
         <Thumbnail
-          link="https://pikachoose2.herokuapp.com/"
+          link="/projects/pikachoose"
           image={pokemon}
           title="Pikachoose"
           // category="Website"
