@@ -8,10 +8,9 @@ import "../css/Projects.css";
 function Projects(props) {
   return (
     <div>
-      <h1>Projects</h1>
       <div className="thumbnail-container">
         <Thumbnail
-          link="https://www.righttime.club/"
+          link="/projects/righttime"
           image={clock}
           title="RightTime"
           // category="Website"

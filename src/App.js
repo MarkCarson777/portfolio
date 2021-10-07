@@ -5,6 +5,7 @@ import Projects from './components/Projects.js';
 import Articles from './components/Articles.js';
 import About from './components/About.js';
 import Navigation from './components/Navigation.js';
+import Righttime from './components/Righttime.js';
 import "./css/App.css"
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/projects" component={Projects} />
+        <Route exact path="/projects/righttime" component={Righttime} />
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/about" component={About} />
 
