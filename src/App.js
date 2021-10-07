@@ -5,6 +5,7 @@ import Projects from './components/Projects.js';
 import Articles from './components/Articles.js';
 import About from './components/About.js';
 import Navigation from './components/Navigation.js';
+import "./css/App.css"
 
 function App() {
   return (

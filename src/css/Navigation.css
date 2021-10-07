@@ -1,6 +1,9 @@
 .navigation {
+  align-items: center;
   background-color: lightblue;
   display: flex;
+  font-family: arial;
+  height: 36px;
   justify-content: flex-end;
 }
 
