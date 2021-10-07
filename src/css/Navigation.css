@@ -1,6 +1,7 @@
 .navigation {
   align-items: center;
-  background-color: lightblue;
+  background-color: black;
+  border-bottom: 2px solid rgba(234, 81, 185, 1.00);
   display: flex;
   font-family: arial;
   height: 36px;
@@ -8,7 +9,7 @@
 }
 
 .navigation a {
-  color: black;
+  color: rgba(251, 247, 228, 1.00);
   padding-right: 8px;
   text-decoration: none;
 }

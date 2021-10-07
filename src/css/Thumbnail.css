@@ -1,17 +1,17 @@
 .project-image img {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  height: 100px;
-  width: 150px;
+  height: 100%;
+  width: 100%;
 }
 
 .project {
   background: lightblue;
   border-radius: 8px;
   box-shadow: 2px 2px 2px lightgrey;
-  height: 150px;
+  height: 100%;
   margin-bottom: 12px;
-  width: 150px;
+  width: 30%;
 }
 
 .project a {
@@ -21,9 +21,11 @@
 }
 
 .project-title {
+  align-items: center;
   display: flex;
   justify-content: center;
-  padding-top: 12px;
+  padding-bottom: 6px;
+  padding-top: 4px;
 }
 
 .project-category {
