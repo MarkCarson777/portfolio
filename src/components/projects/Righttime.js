@@ -1,6 +1,6 @@
 import React from "react";
-import clock from "../assets/clock.jpg";
-import "../css/Righttime.css";
+import clock from "../../assets/clock.jpg";
+import "../../css/Righttime.css";
 
 function Righttime(props) {
   return (
