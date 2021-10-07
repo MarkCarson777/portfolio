@@ -1,9 +1,11 @@
 import React from "react";
+import homepage from "../assets/homepage.jpg";
+import "../css/Home.css";
 
 function Home(props) {
   return (
     <div>
-      <h1>Home</h1>
+      <img className="homepage-bg" src={homepage} alt="Homepage"/>
     </div>
   )
 };
