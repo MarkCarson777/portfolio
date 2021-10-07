@@ -9,22 +9,22 @@ function Projects(props) {
     <div>
       <h1>Projects</h1>
       <Thumbnail
-        link="/righttime"
+        link="https://www.righttime.club/"
         image={clock}
         title="RightTime"
-        category="Website"
+        // category="Website"
       />
       <Thumbnail
-        link="/pikachoose"
+        link="https://pikachoose2.herokuapp.com/"
         image={pokemon}
         title="Pikachoose"
-        category="Website"
+        // category="Website"
       />
       <Thumbnail
-        link="/bournemouthbars"
+        link="https://www.bournemouthbars.com/"
         image={cocktail}
         title="Bournemouth Bars"
-        category="Website"
+        // category="Website"
       />
     </div>
   )

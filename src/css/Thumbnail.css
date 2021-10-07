@@ -14,8 +14,16 @@
   width: 150px;
 }
 
+.project a {
+  color: black;
+  font-family: arial;
+  text-decoration: none;
+}
+
 .project-title {
-  
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
 }
 
 .project-category {
