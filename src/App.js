@@ -14,6 +14,7 @@ function App() {
 
         {/* router setup */}
         <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/about" component={About} />
