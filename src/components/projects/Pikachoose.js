@@ -5,7 +5,7 @@ import "../../css/Pikachoose.css";
 function Pikachoose(props) {
   return (
     <div>
-      <a target="_blank" className="image-container" href="https://pikachoose2.herokuapp.com/">
+      <a target="_blank" rel="noreferrer" className="image-container" href="https://pikachoose2.herokuapp.com/">
         <img className="project-link" src={pokemon} alt="Project Link" />
       </a>
       <div className="righttime-header">
