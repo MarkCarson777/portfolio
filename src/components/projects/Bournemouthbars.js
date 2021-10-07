@@ -1,18 +1,18 @@
 import React from "react";
-import clock from "../../assets/clock.jpg";
-import "../../css/Righttime.css";
+import cocktail from "../../assets/cocktail.jpg";
+import "../../css/Bournemouthbars.css";
 
-function Righttime(props) {
+function Bournemouthbars(props) {
   return (
     <div>
-      <a className="image-container" href="https://www.righttime.club/">
-        <img className="project-link" src={clock} alt="Project Link" />
+      <a target="_blank" rel="noreferrer" className="project-image-container" href="https://www.bournemouthbars.com/">
+        <img className="project-link" src={cocktail} alt="Project Link" />
       </a>
-      <div className="righttime-header">
-        <h1>RightTime</h1>
+      <div className="project-header">
+        <h1>Bournemouth Bars</h1>
       </div>
     </div>
   )
 };
 
-export default Righttime; 
+export default Bournemouthbars; 

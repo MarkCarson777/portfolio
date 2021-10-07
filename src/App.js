@@ -7,6 +7,7 @@ import About from './components/About.js';
 import Navigation from './components/Navigation.js';
 import Righttime from './components/projects/Righttime.js';
 import Pikachoose from './components/projects/Pikachoose.js';
+import Bournemouthbars from './components/projects/Bournemouthbars.js';
 
 import "./css/App.css"
 
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/projects/righttime" component={Righttime} />
         <Route exact path="/projects/pikachoose" component={Pikachoose} />
+        <Route exact path="/projects/bournemouthbars" component={Bournemouthbars} />
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/about" component={About} />
 

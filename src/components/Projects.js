@@ -22,7 +22,7 @@ function Projects(props) {
           // category="Website"
         />
         <Thumbnail
-          link="https://www.bournemouthbars.com/"
+          link="/projects/bournemouthbars"
           image={cocktail}
           title="Bournemouth Bars"
           // category="Website"
