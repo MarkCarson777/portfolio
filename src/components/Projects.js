@@ -1,6 +1,8 @@
 import React from "react";
 import Thumbnail from "./Thumbnail.js";
 import clock from "../assets/clock.jpg";
+import pokemon from "../assets/pokemon.jpg";
+import cocktail from "../assets/cocktail.jpg";
 
 function Projects(props) {
   return (
@@ -14,13 +16,13 @@ function Projects(props) {
       />
       <Thumbnail
         link="/pikachoose"
-        image=""
+        image={pokemon}
         title="Pikachoose"
         category="Website"
       />
       <Thumbnail
         link="/bournemouthbars"
-        image=""
+        image={cocktail}
         title="Bournemouth Bars"
         category="Website"
       />

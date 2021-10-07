@@ -1,11 +1,23 @@
-img {
+.project-image img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   height: 100px;
   width: 150px;
 }
 
 .project {
-  border-style: solid;
+  background: lightblue;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px lightgrey;
   height: 150px;
   margin-bottom: 12px;
   width: 150px;
+}
+
+.project-title {
+  
+}
+
+.project-category {
+
 }
