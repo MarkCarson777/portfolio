@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Home from './Home.js';
-import Projects from './Projects.js';
-import Articles from './Articles.js';
-import About from './About.js';
+import Home from './components/Home.js';
+import Projects from './components/Projects.js';
+import Articles from './components/Articles.js';
+import About from './components/About.js';
 
 function App() {
   return (
