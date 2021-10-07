@@ -1,0 +1,15 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.project-link {
+  height: 100%;
+  width: 30%;
+}
+
+.righttime-header {
+  display: flex;
+  justify-content: center;
+}
