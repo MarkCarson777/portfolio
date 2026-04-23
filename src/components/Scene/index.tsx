@@ -7,13 +7,15 @@ export const Scene = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    // Setup the scene
     const container = containerRef.current;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(300, 300);
+    renderer.setSize(600, 600);
     container.appendChild(renderer.domElement);
 
+    // Setup the cube
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const cube = new THREE.Mesh(geometry, material);
@@ -25,6 +27,7 @@ export const Scene = () => {
 
     camera.position.z = 5;
 
+    // Animate the cube
     const animate = (time: number) => {
       cube.rotation.x = time / 2000;
       cube.rotation.y = time / 1000;
