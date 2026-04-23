@@ -1,5 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { BasicCube, CubeWithEdges, RoundedCubeWithLighting } from ".";
+import {
+  BasicCube,
+  CubeWithEdges,
+  NumberedCube,
+  RoundedCubeWithLighting,
+} from ".";
 
 const meta: Meta<typeof BasicCube> = {
   title: "Scene",
@@ -10,7 +15,7 @@ const meta: Meta<typeof BasicCube> = {
     docs: {
       description: {
         component:
-          "Three.js scene examples that render a rotating cube in three variants: basic, edged, and rounded with lighting.",
+          "Three.js scene examples that render a rotating cube in four variants: basic, edged, rounded with lighting, and numbered faces.",
       },
     },
   },
@@ -62,6 +67,22 @@ export const RoundedWithLighting: Story = {
   render: () => (
     <div style={{ width: "100%", height: "100vh" }}>
       <RoundedCubeWithLighting />
+    </div>
+  ),
+};
+
+export const NumberedFaces: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "A cube with numbers 1 through 6 centered on each face using per-face canvas textures.",
+      },
+    },
+  },
+  render: () => (
+    <div style={{ width: "100%", height: "100vh" }}>
+      <NumberedCube />
     </div>
   ),
 };

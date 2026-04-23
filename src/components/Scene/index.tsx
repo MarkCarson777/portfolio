@@ -4,7 +4,7 @@ import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeom
 
 type SceneConfig = {
   createGeometry: () => THREE.BufferGeometry;
-  createMaterial: () => THREE.Material;
+  createMaterial: () => THREE.Material | THREE.Material[];
   setupExtras?: (scene: THREE.Scene, cube: THREE.Mesh) => void;
 };
 
@@ -48,7 +48,22 @@ const useCubeScene = ({
     return () => {
       renderer.setAnimationLoop(null);
       geometry.dispose();
-      material.dispose();
+      if (Array.isArray(material)) {
+        material.forEach((singleMaterial) => {
+          if (
+            singleMaterial instanceof THREE.MeshBasicMaterial &&
+            singleMaterial.map
+          ) {
+            singleMaterial.map.dispose();
+          }
+          singleMaterial.dispose();
+        });
+      } else {
+        if (material instanceof THREE.MeshBasicMaterial && material.map) {
+          material.map.dispose();
+        }
+        material.dispose();
+      }
       renderer.dispose();
       container.removeChild(renderer.domElement);
     };
@@ -90,6 +105,50 @@ export const RoundedCubeWithLighting = () =>
       directionalLight.position.set(2, 3, 4);
       scene.add(directionalLight);
       scene.add(new THREE.AmbientLight(0xffffff, 0.2));
+    },
+  });
+
+const createFaceTexture = (label: string) => {
+  const size = 256;
+  const canvas = document.createElement("canvas");
+  canvas.width = size;
+  canvas.height = size;
+
+  const context = canvas.getContext("2d");
+  if (!context) {
+    const fallbackTexture = new THREE.Texture();
+    return fallbackTexture;
+  }
+
+  context.fillStyle = "#3ddc84";
+  context.fillRect(0, 0, size, size);
+
+  context.fillStyle = "#111111";
+  context.font = "bold 160px Arial";
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText(label, size / 2, size / 2);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+  return texture;
+};
+
+/**
+ * Cube variant with centered face numbers on all six sides.
+ */
+export const NumberedCube = () =>
+  useCubeScene({
+    createGeometry: () => new THREE.BoxGeometry(1, 1, 1),
+    createMaterial: () => {
+      const textures = ["1", "2", "3", "4", "5", "6"].map(createFaceTexture);
+      return textures.map(
+        (texture) =>
+          new THREE.MeshBasicMaterial({
+            map: texture,
+          }),
+      );
     },
   });
 
