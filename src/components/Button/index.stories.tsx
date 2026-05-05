@@ -4,15 +4,32 @@ import { Button } from ".";
 const meta: Meta<typeof Button> = {
   title: "Button",
   component: Button,
-  args: {
-    children: "Click Me",
-  },
   argTypes: {
     onClick: { action: "onClick" },
+  },
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+    docs: {
+      description: {
+        component: "A basic button component.",
+      },
+    },
   },
 };
 export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    children: "Default",
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: "Disabled",
+  },
+};
